@@ -72,3 +72,23 @@ wss.on('connection', function(ws) {
 
     ws.send('Welcome to the chat server!');
 });
+
+```
+## Use Cases
+
+- **Real-Time Applications:** Chat applications, online gaming, live sports updates, financial tickers.
+- **Collaboration Tools:** Collaborative document editing.
+- **IoT Devices:** Constant connection for instant data exchange.
+
+## Advantages and Disadvantages
+
+### Advantages:
+
+- Real-time communication.
+- Reduced latency.
+- Lower overhead compared to HTTP.
+
+### Disadvantages:
+
+- More complex to implement than standard HTTP.
+- Not suitable for all types of communication.
