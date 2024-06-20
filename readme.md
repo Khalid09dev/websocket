@@ -35,9 +35,9 @@
 
 ## Example
 
-### 💻 Client-Side and Server-Side Codes
+### Client-Side and Server-Side Codes
 
-🖥️ Client-Side Code
+💻 Client-Side Code
 
 ```javascript
 const socket = new WebSocket('ws://example.com/chat');
@@ -59,36 +59,16 @@ socket.onerror = function(error) {
     console.log('WebSocket Error:', error);
 };
 
-
-🖥️ Server-Side Code (Node.js)
-
+### 🖥️ Server-Side Code
+```javascript
 const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 8080 });
 
-wss.on('connection', function connection(ws) {
-    ws.on('message', function incoming(message) {
+wss.on('connection', function(ws) {
+    ws.on('message', function(message) {
         console.log('received:', message);
         ws.send('Hello Client!');
     });
 
     ws.send('Welcome to the chat server!');
 });
-
-
-***Use Cases
-1. Real-Time Applications: Chat applications, online gaming, live sports updates, financial tickers.
-2. Collaboration Tools: Collaborative document editing.
-3. IoT Devices: Constant connection for instant data exchange.
-
-***Advantages and Disadvantages
-
-Advantages:
-
-1. Real-time communication.
-2. Reduced latency.
-3. Lower overhead compared to HTTP.
-
-Disadvantages:
-
-1. More complex to implement than standard HTTP.
-2. Not suitable for all types of communication.
