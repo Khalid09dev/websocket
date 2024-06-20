@@ -57,6 +57,7 @@ socket.onerror = function(error) {
     console.log('WebSocket Error:', error);
 };
 
+```
 ### 🖥️ Server-Side Code
 
 ```javascript
