@@ -35,9 +35,7 @@
 
 ## Example
 
-### Client-Side and Server-Side Codes
-
-💻 Client-Side Code
+### 💻Client-Side Code
 
 ```javascript
 const socket = new WebSocket('ws://example.com/chat');
@@ -60,6 +58,7 @@ socket.onerror = function(error) {
 };
 
 ### 🖥️ Server-Side Code
+
 ```javascript
 const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 8080 });
